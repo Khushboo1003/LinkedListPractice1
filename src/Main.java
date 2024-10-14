@@ -16,7 +16,16 @@ public class Main {
 
     public static void main(String[] args) {
         int [] arr = {2,3,4,5};
+        int LLLength = 0;
         Node head = convertArrayToLL(arr);
         System.out.println(head.data);
+        //Traversing through the LL
+        Node temp = head;
+        while(temp!=null){
+            System.out.println(temp.data);
+            temp = temp.next;
+            LLLength++;
+        }
+        System.out.println("Length of the LL is " + LLLength);
     }
 }
